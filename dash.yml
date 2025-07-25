@@ -1,0 +1,23 @@
+# install  # conda env create -f dash.yml
+# update   # conda env update --file dash.yml --prune
+# remove   # conda remove --name dash --all
+# generate # conda env export > dash_out_env.yml
+
+
+name: dash
+channels:
+    - defaults
+    - conda-forge
+
+dependencies:
+    - python>=3.10
+    - pip==24.0
+    - pip:
+        - dash
+        - numpy
+        - pandas
+        - trino
+        - dash-bootstrap-components
+        - dash-bootstrap-templates
+        
+prefix: /home/amatellian/Anaconda3/envs/dash

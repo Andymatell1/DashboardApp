@@ -1,0 +1,29 @@
+/* Target the scroll container */
+.scroll-container {
+    scrollbar-width: thin;         /* Firefox */
+    scrollbar-color: #ccc transparent;
+}
+
+/* WebKit browsers (Chrome, Edge, Safari) */
+.scroll-container::-webkit-scrollbar {
+    height: 6px;
+}
+
+.scroll-container::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+    background-color: #bbb;
+    border-radius: 4px;
+}
+
+/* Optional: hide scrollbar until hover */
+.scroll-container::-webkit-scrollbar {
+    height: 0;
+    transition: height 0.3s ease;
+}
+
+.scroll-container:hover::-webkit-scrollbar {
+    height: 6px;
+}
